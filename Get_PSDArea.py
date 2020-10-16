@@ -30,6 +30,7 @@ def PSDArea(df_size):
           
 
     Area = np.sum(img_new) / (255.0 * 28 * 28)* L*L
+    print(qual_img,'========')
     Area_todas.append(Area)
 
 
