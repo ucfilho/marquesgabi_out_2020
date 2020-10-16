@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 
 def PSDArea(df_size):
+  Width=np.array(df_size['Width'])
   Size=28
   Nx, Ny = df_size.shape
   Area_todas = []
