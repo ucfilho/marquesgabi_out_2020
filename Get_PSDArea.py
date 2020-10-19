@@ -32,7 +32,7 @@ def PSDArea(df_size):
           
     #for qual_img in range(Nx):
     Area = np.sum(img_new) / (255.0 * 28 * 28)* L*L
-    Diam = (Area)**0.5
+    Diam = 2.0 * (Area/np.pi)**0.5
     Area_todas.append(Area)
     Diam_todos.append(Diam)
     
