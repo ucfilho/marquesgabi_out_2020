@@ -8,9 +8,6 @@ def PSDArea(df_size):
   Size=28
   Nx, Ny = df_size.shape
   
-  print('===============')
-  print('Nx=',Nx)
-  
   Area_todas = []
   for qual_img in range(Nx):
     L = Width[qual_img]
@@ -34,7 +31,6 @@ def PSDArea(df_size):
           
     #for qual_img in range(Nx):
     Area = np.sum(img_new) / (255.0 * 28 * 28)* L*L
-    print(qual_img,'===ooo==ooo===')
     Area_todas.append(Area)
     
   return Area_todas
