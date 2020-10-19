@@ -7,6 +7,10 @@ def PSDArea(df_size):
   Width=np.array(df_size['Width'])
   Size=28
   Nx, Ny = df_size.shape
+  
+  print('===============')
+  print('Nx=',Nx)
+  
   Area_todas = []
   for qual_img in range(Nx):
     L = Width[qual_img]
