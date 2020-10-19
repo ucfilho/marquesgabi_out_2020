@@ -9,6 +9,7 @@ def PSDArea(df_size):
   Nx, Ny = df_size.shape
   
   Area_todas = []
+  Diam_todos = []
   for qual_img in range(Nx):
     L = Width[qual_img]
     data=np.array(df_size.drop('Width',axis=1).iloc[qual_img]).reshape(Size,Size)
@@ -31,7 +32,9 @@ def PSDArea(df_size):
           
     #for qual_img in range(Nx):
     Area = np.sum(img_new) / (255.0 * 28 * 28)* L*L
+    Diam = (Area)**0.5
     Area_todas.append(Area)
+    Diam_todos.append(Diam)
     
-  return Area_todas
+  return Area_todas, Diam_todos
 
