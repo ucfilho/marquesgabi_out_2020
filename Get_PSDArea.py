@@ -32,12 +32,10 @@ def PSDArea(df_size):
         else:
           img_new[i,j] = 0
           
-  #for qual_img in range(Nx):
-  Area = np.sum(img_new) / (255.0 * 28 * 28)* L*L
-  print(qual_img,'===ooo==ooo===')
-  Area_todas.append(Area)
+    #for qual_img in range(Nx):
+    Area = np.sum(img_new) / (255.0 * 28 * 28)* L*L
+    print(qual_img,'===ooo==ooo===')
+    Area_todas.append(Area)
+    
+  return Area_todas
 
-
-    return Area_todas
-
-  
