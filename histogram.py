@@ -1,6 +1,6 @@
 import numpy as np
 
-def PSD(diam):
+def PSD(Diam):
   Size = [1.19,1.00,0.84,0.71,0.59,0.50,0.42,0.35,0.21]
   Malha = [16,18,20,25,30,35,40,45,70]
 
