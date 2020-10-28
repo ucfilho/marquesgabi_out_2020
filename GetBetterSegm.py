@@ -78,7 +78,8 @@ def GetBetter(img):
       #img=np.float32(img) ?????? why is not working ??
       # is there a but here? (bellow)
       # img28=cv2.resize(img,(Size,Size), interpolation = cv2.INTER_AREA)
-      img28_all.append(img28)
+      #img28_all.append(img28)
+      img28_all.append(img)
 
     img28_all=np.array(img28_all)
 
