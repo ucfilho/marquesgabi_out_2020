@@ -75,7 +75,7 @@ def GetBetter(img):
     for i in range(Num):
       data=np.array(ww[i])
       img = Image.fromarray(data.astype('uint8'), mode='L')
-      img=np.float32(img)
+      #img=np.float32(img) ?????? why is not working ??
       img28=cv2.resize(img,(Size,Size), interpolation = cv2.INTER_AREA)
       img28_all.append(img28)
 
