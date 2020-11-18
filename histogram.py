@@ -28,6 +28,8 @@ def PSD(Diam):
     else:
       Class[9] = Class[9]+1 # bigger  70  
   
-  Class = Class[::-1]
   
-  return Class
+  Class = Class[::-1] # write inverse order
+  Perc = Class*100/np.sum(Class)
+  
+  return Class, Perc
