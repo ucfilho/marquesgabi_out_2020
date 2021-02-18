@@ -1,10 +1,10 @@
 import numpy as np
 
 def PSD(Diam):
-  Size = [1.19,1.00,0.84,0.71,0.59,0.50,0.42,0.35,0.21]
-  Malha = [16,18,20,25,30,35,40,45,70]
+  Size = [1.19,1.00,0.85,0.71,0.59,0.50,0.425,0.355,0.30,0.25,0.21]
+  Malha = [16,18,20,25,30,35,40,45,50,60,70]
 
-  Class = np.zeros(9,dtype=int)
+  Class = np.zeros(11,dtype=int)
 
   for item in Diam:
     if item > Size[0]:
@@ -24,9 +24,11 @@ def PSD(Diam):
     elif item > Size[7]:
       Class[7] = Class[7]+1 # between 40 and  45
     elif item > Size[8]:
-      Class[8] = Class[8]+1 # between 45 and  70
+      Class[8] = Class[8]+1 # between 45 and  50
+    elif item > Size[9]:
+      Class[9] = Class[9]+1 # between 50 and  60
     else:
-      Class[9] = Class[9]+1 # bigger  70  
+      Class[10] = Class[10]+1 # bigger  60  
   
   
   Class = Class[::-1] # write inverse order
